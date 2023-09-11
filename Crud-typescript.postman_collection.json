@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "b89bba2b-2b27-4b3b-8017-eda06e2db8b1",
+		"_postman_id": "10009f67-df73-42ed-b46d-ed35211ea20c",
 		"name": "Crud-typescript",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "21207109"
+		"_exporter_id": "12459019"
 	},
 	"item": [
 		{
@@ -202,14 +202,15 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/upload",
+					"raw": "http://localhost:3000/upload/csv",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"upload"
+						"upload",
+						"csv"
 					]
 				}
 			},
@@ -221,14 +222,15 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/file",
+					"raw": "http://localhost:3000/upload/base64",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"file"
+						"upload",
+						"base64"
 					]
 				}
 			},
