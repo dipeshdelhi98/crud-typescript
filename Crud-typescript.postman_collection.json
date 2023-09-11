@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "b89bba2b-2b27-4b3b-8017-eda06e2db8b1",
+		"name": "Crud-typescript",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21207109"
+	},
+	"item": [
+		{
+			"name": "Add Blog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGZmMzQxNmMyMmJjNWFiMjcyMDNlZTciLCJpYXQiOjE2OTQ0NTIyMTMsImV4cCI6MTY5NDQ1NTgxM30._8867-7BJo1Wu65hK7gp28bzr2Le5tf8-cakv_cnbOY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "titile1",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "Description",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Administrator/OneDrive/Desktop/nancy aadhar 2.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}",
+					"host": [
+						"{{baseUrl}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update blog",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Divyaa\",\r\n    \"content\":\"Something\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/64ff23714caaa2330ec563e5",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"64ff23714caaa2330ec563e5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Blog",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/64ff23714caaa2330ec563e5",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"64ff23714caaa2330ec563e5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Blog by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/64ff23714caaa2330ec563e5",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"64ff23714caaa2330ec563e5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Blogs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}",
+					"host": [
+						"{{baseUrl}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"dipesh124\",\r\n    \"password\":\"124\",\r\n    \"email\":\"dipesh@gmail.com\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/register",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"dipesh124\",\r\n    \"password\":\"124\",\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DownloadBog",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/download/csv",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"download",
+						"csv"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CSV toJson",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Base64toFile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/file",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"file"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3000/api/blogs",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGZmMzMyOGMyMmJjNWFiMjcyMDNlZTIiLCJpYXQiOjE2OTQ0NDY1MzksImV4cCI6MTY5NDQ1MDEzOX0.2UNhfo8XmblczQmY7VSmyDI4tDeNJYgXBnxyVD8KxKg",
+			"type": "string"
+		}
+	]
+}
